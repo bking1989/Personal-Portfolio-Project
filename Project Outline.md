@@ -1,5 +1,15 @@
 # Project Outline
 
+* ### **Required Technology**
+   * HTML / CSS / JavaScript (jQuery and ES6 included)
+   * NodeJS
+   * MySQL / MongoDB
+   * ReactJS
+
+* ### **Optional / Side Technology**
+   * SVG Canvas (dynamic splash page?)
+   * D3.js (use it to spruce resume?)
+
 * ### **About Section**
     * Discuss previous education experiences
     * Discuss previous work experiences
