@@ -74,10 +74,10 @@ div#navigation ul li a{
         content: "";
         -moz-transform-origin: top;
         -moz-transform: scaleY(0);
-        -moz-transition: all ease-in-out 400ms;
+        -moz-transition: all ease-in-out 300ms;
         -webkit-transform-origin: top;
         -webkit-transform: scaleY(0);
-        -webkit-transition: all ease-in-out 400ms;
+        -webkit-transition: all ease-in-out 300ms;
         bottom: 0;
         display: block;
         left: 0;
@@ -86,7 +86,7 @@ div#navigation ul li a{
         top: 0;
         transform-origin: top;
         transform: scaleY(0);
-        transition: all ease-in-out 400ms;
+        transition: all ease-in-out 300ms;
         z-index: -1;
     }
 
@@ -217,9 +217,9 @@ div#landing h1 span span.name{
 }
 
 div#landing a#landingBtn{
-    -moz-transition: all ease-in-out 400ms;
+    -moz-transition: all ease-in-out 300ms;
     -moz-user-select: none;
-    -webkit-transition: all ease-in-out 400ms;
+    -webkit-transition: all ease-in-out 300ms;
     -webkit-user-select: none;
     border: rgba(255,255,255,1) solid 3px;
     color: rgba(255,255,255,1);
@@ -231,16 +231,13 @@ div#landing a#landingBtn{
     padding: 0.5em 0.75em;
     position: relative;
     text-decoration: none;
-    transition: all ease-in-out 400ms;
+    transition: all ease-in-out 300ms;
     user-select: none;
     z-index: 2;
 }
 
 div#landing a#landingBtn i{
-    -moz-transform: rotate(-90deg);
-    -webkit-transform: rotate(-90deg);
     margin: 0 0.5em 0 0;
-    transform: rotate(-90deg);
 }
 
 
