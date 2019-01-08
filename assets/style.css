@@ -198,7 +198,7 @@ div#landing:after{
 div#landing h1{
     color: rgba(255,255,255,1);
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-    font-size: 3em;
+    font-size: 3.5em;
     font-weight: 500;
     line-height: 1.25;
 }
@@ -257,4 +257,38 @@ div#landing a#landingBtn:hover{
         font-size: 2.2em;
         margin: 0 2em;
     }
+}
+
+/* About Page */
+
+div#aboutPage{
+    position: relative;
+}
+
+div#aboutPage div.right-half{
+    bottom: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50vw;
+}
+
+div#aboutPage div.right-half h1{
+    color: black;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 2.2em;
+    line-height: 1;
+    margin: 20px;
+}
+
+div#aboutPage div.right-half h1:first-of-type{
+    margin-top: calc(20px + 1em);
+}
+
+div#aboutPage div.right-half p{
+    color: black;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 1.2em;
+    line-height: 1.5em;
+    margin: 20px;
 }
