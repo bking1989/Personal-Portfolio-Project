@@ -12,10 +12,6 @@ const menuToggle = () => {
 $(document).ready(function() {
     landingFn();
 
-    setTimeout(function() {
-        $("body").css("overflow", "visible");
-    }, 4900);
-
     $("#menuBtn").on("click", function(event) {
         event.preventDefault();
         menuToggle()
