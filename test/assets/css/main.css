@@ -1,0 +1,36 @@
+/* Body */
+body{
+    height: 100%;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+/* Navigation */
+div#navBar{
+    background-color: rgba(17,17,17,1);
+    display: block;
+    height: 48px;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+}
+
+div#navBar.expand{
+    height: 300px;
+}
+
+a#menuToggle{
+    color: rgba(255,255,255,1);
+    display: inline-block;
+    font-size: 24px;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    width: 48px;
+}
+
+/* Media Queries */
