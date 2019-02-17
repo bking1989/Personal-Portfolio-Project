@@ -9,9 +9,9 @@ body{
 
 /* Navigation */
 div#navBar{
-    background-color: rgba(17,17,17,1);
+    background-color: rgba(0,0,0,1);
     display: block;
-    height: 48px;
+    height: 54px;
     left: 0;
     position: fixed;
     right: 0;
@@ -20,17 +20,18 @@ div#navBar{
 }
 
 div#navBar.expand{
-    height: 300px;
+    height: 100vh;
 }
 
 a#menuToggle{
     color: rgba(255,255,255,1);
-    display: inline-block;
-    font-size: 24px;
-    height: 48px;
-    line-height: 48px;
+    display: block;
+    float: left;
+    font-size: 32px;
+    height: 54px;
+    line-height: 54px;
     text-align: center;
-    width: 48px;
+    width: 54px;
 }
 
 /* Media Queries */
