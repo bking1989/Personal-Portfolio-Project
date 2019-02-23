@@ -1,4 +1,9 @@
+/* Web Fonts */
+
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:100,400');
+
 /* Body */
+
 body{
     height: 100%;
     line-height: 1;
@@ -8,29 +13,84 @@ body{
 }
 
 /* Navigation */
+
 div#navBar{
-    background-color: rgba(17,17,17,1);
-    display: block;
-    height: 48px;
+    background-color: rgba(0,0,0,0.8);
     left: 0;
+    padding: 0 100px;
     position: fixed;
     right: 0;
     top: 0;
-    width: 100%;
+    width: calc(100% - 200px);
 }
 
-div#navBar.expand{
-    height: 300px;
-}
-
-a#menuToggle{
+div#navBar h1{
     color: rgba(255,255,255,1);
+    font-family: 'IBM Plex Sans', -apple-system, 'San Francisco', 'Segoe UI', 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    height: 80px;
+    float: left;
+    font-weight: 100;
+    font-size: 48px;
+    line-height: 80px;
+    margin: 0;
+    padding: 0;
+}
+
+div#navBar h1 span{
+    font-weight: 400;
+}
+
+div#navBar ul{
+    display: flex;
+    float: right;
+    list-style-position: inside;
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+div#navBar ul li{
+    color: rgba(255,255,255,1);
+    font-weight: 100;
+    height: 80px;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+}
+
+div#navBar ul li a{
+    color: inherit;
     display: inline-block;
+    font-family: 'IBM Plex Sans', -apple-system, 'San Francisco', 'Segoe UI', 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 24px;
-    height: 48px;
-    line-height: 48px;
-    text-align: center;
-    width: 48px;
+    line-height: 80px;
+    padding: 0 0.8em;
+    text-decoration: none;
+}
+
+div#navBar ul li:after{
+    content: "";
+    -moz-transition: width 0.4s;
+    -webkit-transition: width 0.4s;
+    background-color: rgba(255,255,255,0.8);
+    height: 1px;
+    left: 1em;
+    margin: auto;
+    position: absolute;
+    top: 58px;
+    transition: width 0.4s;
+    width: 0;
+}
+
+div#navBar ul li:hover:after{
+    content: "";
+    background-color: rgba(255,255,255,0.8);
+    height: 1px;
+    left: 1em;
+    position: absolute;
+    top: 58px;
+    width: calc(100% - 2em);
+    margin: auto;
 }
 
 /* Media Queries */
