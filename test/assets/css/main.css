@@ -72,3 +72,50 @@ div#navBar ul li:hover:after{
 }
 
 /* Media Queries */
+
+@media only screen and (max-width: 768px) {
+    div#navBar{
+        bottom: 0;
+        height: 100%;
+        left: 0;
+        margin: 0 auto 0 0;
+        padding: 0px;
+        top: 0;
+        width: 180px;
+    }
+
+    div#navBar ul{
+        -moz-transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        display: block;
+        float: none;
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        transform: translateY(-50%);
+    }
+
+    div#navBar ul li{
+        display: block;
+        height: 60px;
+        width: inherit;
+    }
+
+    div#navBar ul li a{
+        bottom: 0;
+        left: 0;
+        line-height: 60px;
+        position: absolute;
+        right: 0;
+        text-align: center;
+        top: 0;
+    }
+
+    div#navBar ul li:after{
+        left: 2em;
+    }
+
+    div#navBar ul li:hover:after{
+        width: calc(100% - 4em);
+    }
+}
