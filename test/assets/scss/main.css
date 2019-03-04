@@ -24,13 +24,14 @@ nav {
     font-size: 48px;
     font-weight: 500;
     line-height: 64px;
-    margin: 0 0 0 20px; }
+    margin: 0 0 0 30px;
+    user-select: none; }
   nav ul {
     display: flex;
     float: right;
     list-style-position: inside;
     list-style-type: none;
-    margin: 0 20px 0 0; }
+    margin: 0 30px 0 0; }
     nav ul li {
       display: block;
       height: 64px;
@@ -44,107 +45,39 @@ nav {
         padding: 27px 1em 9px;
         position: relative;
         text-decoration: none;
+        user-select: none;
         z-index: 3; }
+      nav ul li#about:after, nav ul li#resume:after, nav ul li#portfolio:after, nav ul li#contact:after {
+        -moz-transition: height 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+        -webkit-transition: height 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+        transition: height 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+        content: "";
+        display: block;
+        left: 0;
+        margin: auto;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 2;
+        height: 0; }
+      nav ul li#about:hover:after, nav ul li#resume:hover:after, nav ul li#portfolio:hover:after, nav ul li#contact:hover:after {
+        content: "";
+        display: block;
+        left: 0;
+        margin: auto;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 2;
+        height: 64px; }
       nav ul li#about:after {
-        -moz-transition: height 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-        -webkit-transition: height 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-        transition: height 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-        content: "";
-        display: block;
-        left: 0;
-        margin: auto;
-        position: absolute;
-        right: 0;
-        top: 0;
-        z-index: 2;
-        background-color: #fd7400;
-        height: 0; }
-      nav ul li#about:hover:after {
-        content: "";
-        display: block;
-        left: 0;
-        margin: auto;
-        position: absolute;
-        right: 0;
-        top: 0;
-        z-index: 2;
-        background-color: #fd7400;
-        height: 64px; }
+        background-color: #fd7400; }
       nav ul li#resume:after {
-        -moz-transition: height 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-        -webkit-transition: height 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-        transition: height 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-        content: "";
-        display: block;
-        left: 0;
-        margin: auto;
-        position: absolute;
-        right: 0;
-        top: 0;
-        z-index: 2;
-        background-color: #ffe11a;
-        height: 0; }
-      nav ul li#resume:hover:after {
-        content: "";
-        display: block;
-        left: 0;
-        margin: auto;
-        position: absolute;
-        right: 0;
-        top: 0;
-        z-index: 2;
-        background-color: #ffe11a;
-        height: 64px; }
+        background-color: #ffe11a; }
       nav ul li#portfolio:after {
-        -moz-transition: height 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-        -webkit-transition: height 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-        transition: height 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-        content: "";
-        display: block;
-        left: 0;
-        margin: auto;
-        position: absolute;
-        right: 0;
-        top: 0;
-        z-index: 2;
-        background-color: #bedb39;
-        height: 0; }
-      nav ul li#portfolio:hover:after {
-        content: "";
-        display: block;
-        left: 0;
-        margin: auto;
-        position: absolute;
-        right: 0;
-        top: 0;
-        z-index: 2;
-        background-color: #bedb39;
-        height: 64px; }
+        background-color: #bedb39; }
       nav ul li#contact:after {
-        -moz-transition: height 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-        -webkit-transition: height 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-        transition: height 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-        content: "";
-        display: block;
-        left: 0;
-        margin: auto;
-        position: absolute;
-        right: 0;
-        top: 0;
-        z-index: 2;
-        background-color: #1f8a70;
-        height: 0; }
-      nav ul li#contact:hover:after {
-        content: "";
-        display: block;
-        left: 0;
-        margin: auto;
-        position: absolute;
-        right: 0;
-        top: 0;
-        z-index: 2;
-        background-color: #1f8a70;
-        height: 64px; }
+        background-color: #1f8a70; }
 
 /* Splash Section */
 div#splash {
