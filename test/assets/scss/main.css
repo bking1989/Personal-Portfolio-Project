@@ -1,7 +1,13 @@
+@import url(../css/normalize.css);
 body {
   height: 100%;
-  width: 100%;
+  line-height: 1;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  width: 100%; }
+
+div#about {
+  height: 100vh;
+  width: 100vw; }
 
 /*# sourceMappingURL=main.css.map */
