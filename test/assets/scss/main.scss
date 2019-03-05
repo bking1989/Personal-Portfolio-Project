@@ -1,55 +1,35 @@
-// Global Variables
-$body-font: "Helvetica Neue", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu,Cantarell, sans-serif;
-$header-font: 'Oswald', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu,Cantarell,"Helvetica Neue", sans-serif;
+// Imported Files
+@import '../css/normalize.css';
 
-// Color Palette: https://color.adobe.com/Vitamin-C-color-theme-492199/
-$aquamarine: rgba(31,138,112,1);
-$black: rgba(0,0,0,1);
-$green: rgba(190,219,57,1);
-$orange: rgba(253,116,0,1);
-$white: rgba(255,255,255,1);
-$yellow: rgba(255,225,26,1);
+// Global Variables
+$font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+
+// Colors (https://color.adobe.com/Copy-of-Copy-of-Copy-of-Copy-of-Copy-of-Core-color-theme-11987554/)
+$red: #ED553B;
+$orange: #F2B134;
+$green: #0894A1;
+$blue: #0894A1;
 
 // Mixins
-@mixin nav-animation {
-    -moz-transition: height 0.4s cubic-bezier(0.86,0,0.07,1);
-    -webkit-transition: height 0.4s cubic-bezier(0.86,0,0.07,1);
-    transition: height 0.4s cubic-bezier(0.86,0,0.07,1);
-}
-
-@mixin nav-hover {
-    content: "";
-    display: block;
-    left: 0;
-    margin: auto;
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: 2;
-}
-
 @mixin section {
+    display: block;
     margin: 0;
     padding: 0;
+    position: relative;
     width: 100vw;
 }
 
 @mixin section-cover {
     content: "";
-    background-color: rgba(0,0,0,0.8);
+    background: rgba(0,0,0,0.7);
     bottom: 0;
     left: 0;
-    margin: 0;
+    margin: auto;
     padding: 0;
     position: absolute;
     right: 0;
     top: 0;
-    z-index: 2;
 }
-
-/* Imported Assets */
-@import '../css/normalize.css';
-@import url('https://fonts.googleapis.com/css?family=Oswald:400,500');
 
 /* Body */
 body {
@@ -60,96 +40,35 @@ body {
     width: 100%;
 }
 
-/* Navigation Menu */
-nav {
-    height: 64px;
-    margin: 0;
-    padding: 0;
-    position: fixed;
-    width: 100%;
-    z-index: 3;
-
-    h1 {
-        color: $white;
-        display: inline;
-        font-family: $header-font;
-        font-size: 48px;
-        font-weight: 500;
-        line-height: 64px;
-        margin: 0 0 0 30px;
-        user-select: none;
-    }
-
-    ul {
-        display: flex;
-        float: right;
-        list-style-position: inside;
-        list-style-type: none;
-        margin: 0 30px 0 0;
-
-        li {
-            display: block;
-            height: 64px;
-            position: relative;
-
-            a {
-                color: $white;
-                display: block;
-                font-family: $header-font;
-                font-size: 28px;
-                font-weight: 400;
-                padding: 27px 1em 9px;
-                position: relative;
-                text-decoration: none;
-                user-select: none;
-                z-index: 3;
-            }
-
-            &#about:after,
-            &#resume:after,
-            &#portfolio:after,
-            &#contact:after {
-                @include nav-animation;
-                @include nav-hover;
-                height: 0;
-            }
-
-            &#about:hover:after,
-            &#resume:hover:after,
-            &#portfolio:hover:after,
-            &#contact:hover:after {
-                @include nav-hover;
-                height: 64px;
-            }
-
-            &#about:after {
-                background-color: $orange;
-            }
-
-            &#resume:after{
-                background-color: $yellow;
-            }
-
-            &#portfolio:after{
-                background-color: $green;
-            }
-
-            &#contact:after{
-                background-color: $aquamarine;
-            }
-        }
-    }
-}
-
-/* Splash Section */
-div#splash {
+/* Opening Section */
+div#opening {
     @include section;
+    align-items: center;
     background-image: url('../images/landingPlaceholder.jpg');
-    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
     height: 100vh;
+    justify-content: center;
 
     &:after {
         @include section-cover;
+    }
+
+    h1 {
+        color: white;
+        font-family: $font-stack;
+        font-size: 48px;
+        font-weight: 500;
+        line-height: 64px;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        z-index: 2;
+
+        i {
+            color: $red;
+            font-style: normal;
+        }
     }
 }
