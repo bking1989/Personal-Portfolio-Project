@@ -44,5 +44,16 @@ div#opening {
     div#opening h1 i {
       color: #ED553B;
       font-style: normal; }
+    div#opening h1 span {
+      opacity: 0; }
+      div#opening h1 span.new {
+        opacity: 1 !important; }
+
+/* Media Queries */
+@media only screen and (max-width: 768px) {
+  div#opening h1 {
+    font-size: 32px;
+    line-height: 40px;
+    margin: 0 20px; } }
 
 /*# sourceMappingURL=main.css.map */

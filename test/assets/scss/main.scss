@@ -70,5 +70,25 @@ div#opening {
             color: $red;
             font-style: normal;
         }
+
+        span {
+            opacity: 0;
+
+            &.new{
+                opacity: 1!important;
+            }
+        }
+    }
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 768px) {
+    div#opening{
+        h1 {
+            font-size: 32px;
+            line-height: 40px;
+            margin: 0 20px;
+        }
     }
 }
