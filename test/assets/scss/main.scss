@@ -21,7 +21,7 @@ $blue: #0894A1;
 
 @mixin section-cover {
     content: "";
-    background: rgba(0,0,0,0.7);
+    background: rgba(0,0,0,0.8);
     bottom: 0;
     left: 0;
     margin: auto;
@@ -86,9 +86,9 @@ div#opening {
 @media only screen and (max-width: 768px) {
     div#opening{
         h1 {
-            font-size: 32px;
-            line-height: 40px;
-            margin: 0 20px;
+            font-size: 36px;
+            line-height: 48px;
+            margin: 0 1em;
         }
     }
 }
