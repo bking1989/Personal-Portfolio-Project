@@ -1,22 +1,25 @@
 // Imported Files
 @import '../css/normalize.css';
+@import 'https://fonts.googleapis.com/css?family=Titillium+Web:400,600';
 
 // Global Variables
+$headline-stack: 'Titillium Web', Frutiger, "Frutiger Linotype", Calibri, "Helvetica Neue", Helvetica, Arial, sans-serif;
 $font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 
 // Colors (https://color.adobe.com/Copy-of-Copy-of-Copy-of-Copy-of-Copy-of-Core-color-theme-11987554/)
-$red: #ED553B;
-$orange: #F2B134;
-$green: #0894A1;
 $blue: #0894A1;
+$green: #0894A1;
+$orange: #F2B134;
+$red: #ED553B;
 
 // Mixins
 @mixin section {
     display: block;
     margin: 0;
+    overflow: auto;
     padding: 0;
     position: relative;
-    width: 100vw;
+    max-width: 100vw;
 }
 
 @mixin section-cover {
@@ -57,13 +60,14 @@ div#opening {
 
     h1 {
         color: white;
-        font-family: $font-stack;
+        font-family: $headline-stack;
         font-size: 48px;
-        font-weight: 500;
+        font-weight: 600;
         line-height: 64px;
         margin: 0;
         padding: 0;
         position: relative;
+        user-select: none;
         z-index: 2;
 
         i {
@@ -81,6 +85,62 @@ div#opening {
     }
 }
 
+/* About Section */
+div#about {
+    @include section;
+    background-image: url('../images/aboutPlaceholder.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &:after {
+        @include section-cover;
+        background-color: rgba(0,0,0,0.6)!important;
+    }
+
+    div#about_content {
+        background-color: white;
+        float: right;
+        margin: 60px 30px 0px 0;
+        opacity: 0;
+        padding: 30px 0;
+        position: relative;
+        width: calc(50% - 30px);
+        z-index: 3;
+
+        &.scroll {
+            margin: 30px 30px 30px 0;
+            opacity: 1;
+        }
+
+        h1 {
+            border-bottom: black solid 5px;
+            color: black;
+            display: inline-block;
+            font-family: $headline-stack;
+            font-size:48px;
+            font-weight: 600;
+            margin: 0 30px 0.5em;
+            padding-bottom: 9px;
+            text-align: left;
+            user-select: none;
+        }
+
+        p {
+            color: black;
+            font-family: $font-stack;
+            font-size: 16px;
+            line-height: 24px;
+            margin: 0 30px;
+            text-align: left;
+
+            span {
+                color: $red;
+                font-weight: 500;
+            }
+        }
+    }
+}
+
 /* Media Queries */
 
 @media only screen and (max-width: 768px) {
@@ -88,7 +148,32 @@ div#opening {
         h1 {
             font-size: 36px;
             line-height: 48px;
-            margin: 0 1em;
+            margin: 0 30px;
+        }
+    }
+
+    div#about {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        div#about_content {
+            margin: 60px 30px 0;
+            opacity: 0;
+            order: 2;
+            width: calc(100% - 60px);
+
+            &.scroll{
+                margin: 30px;
+                opacity: 1;
+            }
+
+            h1 {
+                font-size: 36px;
+                padding-bottom: 6px;
+                border-bottom: black solid 4px;
+            }
         }
     }
 }
