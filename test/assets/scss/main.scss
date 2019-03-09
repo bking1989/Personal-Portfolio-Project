@@ -3,8 +3,8 @@
 @import 'https://fonts.googleapis.com/css?family=Titillium+Web:400,600';
 
 // Global Variables
-$headline-stack: 'Titillium Web', Frutiger, "Frutiger Linotype", Calibri, "Helvetica Neue", Helvetica, Arial, sans-serif;
 $font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+$headline-stack: 'Titillium Web', Frutiger, "Frutiger Linotype", Calibri, "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 // Colors (https://color.adobe.com/Copy-of-Copy-of-Copy-of-Copy-of-Copy-of-Core-color-theme-11987554/)
 $blue: #0894A1;
@@ -16,10 +16,10 @@ $red: #ED553B;
 @mixin section {
     display: block;
     margin: 0;
+    max-width: 100vw;
     overflow: auto;
     padding: 0;
     position: relative;
-    max-width: 100vw;
 }
 
 @mixin section-cover {
@@ -41,6 +41,10 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
+}
+
+br {
+    user-select: none;
 }
 
 /* Opening Section */
@@ -99,8 +103,10 @@ div#about {
 
     div#about_content {
         background-color: white;
+        box-shadow: rgba(0,0,0,0.4) 0px 0px 15px;
         float: right;
         margin: 60px 30px 0px 0;
+        max-width: 650px;
         opacity: 0;
         padding: 30px 0;
         position: relative;
@@ -131,11 +137,30 @@ div#about {
             font-size: 16px;
             line-height: 24px;
             margin: 0 30px;
+            position: relative;
             text-align: left;
+        }
 
-            span {
-                color: $red;
-                font-weight: 500;
+        ul {
+            -moz-columns: 2;
+            -webkit-columns: 2;
+            columns: 2;
+            list-style-position: inside;
+            list-style-type: none;
+            margin: 0 30px;
+
+            li {
+                color: black;
+                font-family: $font-stack;
+                font-size: 16px;
+                line-height: 24px;
+
+                &:before {
+                    content: "✔️";
+                    font-size: 16px;
+                    line-height: 24px;
+                    margin: 0 0.5em 0 0;
+                }
             }
         }
     }
@@ -143,7 +168,7 @@ div#about {
 
 /* Media Queries */
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px), (max-width: 812px) and (orientation: landscape) {
     div#opening{
         h1 {
             font-size: 36px;
@@ -170,9 +195,13 @@ div#about {
             }
 
             h1 {
+                border-bottom: black solid 4px;
                 font-size: 36px;
                 padding-bottom: 6px;
-                border-bottom: black solid 4px;
+            }
+
+            ul {
+                padding-inline-start: 0px;
             }
         }
     }
