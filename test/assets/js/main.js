@@ -6,12 +6,13 @@ $(document).ready(function() {
 
     // Scroll-into-view code
     $(window).scroll(function() {
+        // About section fades in
         let windowBottom = $(window).scrollTop() + $(window).height();
         let aboutOffset = ($("#about").offset().top - windowBottom) * -1;
 
-        // About section fades in
         if(aboutOffset >= 100) {
-            $("#about_content").addClass("scroll", 600);
+            $("#about_content.top").addClass("scroll", 600);
+            $("#about_content.resume").addClass("scroll", 600);
         }
     });
 });

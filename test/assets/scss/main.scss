@@ -104,6 +104,7 @@ div#about {
     div#about_content {
         background-color: white;
         box-shadow: rgba(0,0,0,0.4) 0px 0px 15px;
+        clear: left;
         float: right;
         margin: 60px 30px 0px 0;
         max-width: 650px;
@@ -118,49 +119,118 @@ div#about {
             opacity: 1;
         }
 
-        h1 {
-            border-bottom: black solid 5px;
-            color: black;
-            display: inline-block;
-            font-family: $headline-stack;
-            font-size:48px;
-            font-weight: 600;
-            margin: 0 30px 0.5em;
-            padding-bottom: 9px;
-            text-align: left;
-            user-select: none;
-        }
+        div#about_top {
+            margin-bottom: 30px;
 
-        p {
-            color: black;
-            font-family: $font-stack;
-            font-size: 16px;
-            line-height: 24px;
-            margin: 0 30px;
-            position: relative;
-            text-align: left;
-        }
+            h1 {
+                border-bottom: black solid 5px;
+                color: black;
+                display: inline-block;
+                font-family: $headline-stack;
+                font-size: 48px;
+                font-weight: 600;
+                margin: 0 30px 0.5em;
+                padding-bottom: 9px;
+                text-align: left;
+                user-select: none;
+            }
 
-        ul {
-            -moz-columns: 2;
-            -webkit-columns: 2;
-            columns: 2;
-            list-style-position: inside;
-            list-style-type: none;
-            margin: 0 30px;
-
-            li {
+            p {
                 color: black;
                 font-family: $font-stack;
                 font-size: 16px;
-                line-height: 24px;
+                line-height: 22px;
+                margin: 0 30px;
+                position: relative;
+                text-align: left;
+            }
 
-                &:before {
-                    content: "✔️";
-                    font-size: 16px;
-                    line-height: 24px;
-                    margin: 0 0.5em 0 0;
+            div#list_block {
+                justify-content: center;
+                display: flex;
+                margin: 0 30px;
+
+                ul {
+                    -moz-column-gap: 30px;
+                    -moz-columns: 3;
+                    -webkit-column-gap: 30px;
+                    -webkit-columns: 3;
+                    column-gap: 30px;
+                    columns: 3;
+                    list-style-position: inside;
+                    list-style-type: none;
+                    margin: 0;
+                    padding-inline-end: 0px;
+                    padding-inline-start: 0px;
+                    padding: 0;
+
+                    li {
+                        color: black;
+                        font-family: $font-stack;
+                        font-size: 16px;
+                        line-height: 22px;
+
+                        &:before {
+                            content: "✔️";
+                            font-size: 16px;
+                            line-height: 22px;
+                            margin: 0 0.5em 0 0;
+                        }
+                    }
                 }
+            }
+        }
+
+        div#about_resume {
+            &.hidden {
+                display: none;
+            }
+
+            h1 {
+                border-bottom: black solid 5px;
+                color: black;
+                display: inline-block;
+                font-family: $headline-stack;
+                font-size: 48px;
+                font-weight: 600;
+                margin: 0 30px 0.5em;
+                padding-bottom: 9px;
+                text-align: left;
+                user-select: none;
+            }
+
+            p, ul li {
+                color: black;
+                font-family: $font-stack;
+                font-size: 16px;
+                line-height: 22px;
+                position: relative;
+                text-align: left;
+            }
+
+            p {
+                margin: 0 30px;
+            }
+
+            h2 {
+                border-bottom: black solid 2px;
+                color: black;
+                display: block;
+                font-family: $headline-stack;
+                font-size: 24px;
+                font-weight: 400;
+                margin: 0 30px;
+                padding-bottom: 5px;
+                text-align: right;
+                user-select: none;
+            }
+
+            ul {
+                list-style-position: outside;
+                list-style-type: square;
+                margin: 0 30px;
+                padding-inline-start: 30px;
+                padding-inline-end: 0px;
             }
         }
     }
@@ -168,7 +238,7 @@ div#about {
 
 /* Media Queries */
 
-@media only screen and (max-width: 768px), (max-width: 812px) and (orientation: landscape) {
+@media only screen and (max-width: 768px), (max-width: 823px) and (orientation: landscape) {
     div#opening{
         h1 {
             font-size: 36px;
@@ -194,14 +264,25 @@ div#about {
                 opacity: 1;
             }
 
-            h1 {
-                border-bottom: black solid 4px;
-                font-size: 36px;
-                padding-bottom: 6px;
-            }
+            div#about_top {
+                h1 {
+                    border-bottom: black solid 4px;
+                    font-size: 36px;
+                    padding-bottom: 6px;
+                }
 
-            ul {
-                padding-inline-start: 0px;
+                h2 {
+                    font-size: 20px;
+                    padding-bottom: 3px;
+                }
+
+                div#list_block {
+                    ul {
+                        -moz-columns: 2;
+                        -webkit-colums: 2;
+                        columns: 2;
+                    }
+                }
             }
         }
     }
