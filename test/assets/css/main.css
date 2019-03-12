@@ -200,6 +200,7 @@ div#about {
     justify-content: center; }
     div#about div.about_content {
       margin: 30px 0 !important;
+      max-width: none;
       opacity: 0;
       width: calc(100% - 60px); }
       div#about div.about_content.scroll {
