@@ -11,8 +11,8 @@ $(document).ready(function() {
         let aboutOffset = ($("#about").offset().top - windowBottom) * -1;
 
         if(aboutOffset >= 100) {
-            $("#about_content.top").addClass("scroll", 600);
-            $("#about_content.resume").addClass("scroll", 600);
+            $("div#about1").addClass("scroll", 600);
+            $("div#about2").addClass("scroll", 600);
         }
     });
 });
