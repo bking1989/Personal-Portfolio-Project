@@ -1,0 +1,112 @@
+@import "./modules/normalize.css";
+@import "./modules/_button";
+@import "./modules/_fonts";
+@import "./modules/_mobile";
+@import "./modules/_section";
+
+body, html {
+    height: 100%;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+br {
+    user-select: none;
+}
+
+div#open-section {
+    @include section;
+    align-content: center;
+    background: grey;
+    display: flex!important;
+    height: 100vh;
+    justify-content: center;
+
+    div.open-container {
+        align-self: center;
+        max-width: 50vw;
+        text-align: center;
+
+        @media #{$mobile} {
+            margin: 0 40px;
+            max-width: none;
+        }
+
+        h1 {
+            display: block;
+            font-family: $headline-stack;
+            font-size: 48px;
+            line-height: 60px;
+            margin: 0;
+            opacity: 1;
+            text-align: left;
+
+            @media #{$mobile} {
+                font-size: 36px;
+                line-height: 48px;
+            }
+        }
+
+        h1:last-of-type {
+            margin-bottom: 48px;
+
+            @media #{$mobile} {
+                margin-bottom: 36px;
+            }
+        }
+
+        p {
+            font-family: $body-stack;
+            font-size: 18px;
+            line-height: 24px;
+            margin: 0 0 48px 0;
+            opacity: 1;
+            text-align: left;
+
+            @media #{$mobile} {
+                font-size: 16px;
+                line-height: 20px;
+                margin: 0 0 36px 0;
+            }
+        }
+
+        a {
+            @include button;
+            color: inherit;
+            font-family: $body-stack;
+            font-size: 18px;
+            line-height: 24px;
+            opacity: 1;
+            transition: background ease-in-out 400ms;
+            -moz-transition: background ease-in-out 400ms;
+            -webkit-transition: background ease-in-out 400ms;
+
+            @media #{$mobile} {
+                font-size: 16px;
+                line-height: 20px;
+            }
+        }
+
+        a:hover {
+            background: rgba(255,255,255,0.5);
+        }
+
+        .hidden {
+            margin-top: -48px;
+            opacity: 0;
+            padding-bottom: 48px;
+
+            @media #{$mobile} {
+                margin-top: -36px;
+                opacity: 0;
+                padding-bottom: 36px;
+            }
+        }
+
+        .hidden-button {
+            opacity: 0;
+        }
+    }
+}
