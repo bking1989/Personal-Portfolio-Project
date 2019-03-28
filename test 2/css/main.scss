@@ -94,14 +94,14 @@ div#open-section {
         }
 
         .hidden {
-            margin-top: -48px;
+            margin-top: -30px;
             opacity: 0;
-            padding-bottom: 48px;
+            padding-bottom: 30px;
 
             @media #{$mobile} {
-                margin-top: -36px;
+                margin-top: -20px;
                 opacity: 0;
-                padding-bottom: 36px;
+                padding-bottom: 20px;
             }
         }
 

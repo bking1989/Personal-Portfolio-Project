@@ -6,12 +6,10 @@ body, html {
   line-height: 1;
   margin: 0;
   padding: 0;
-  width: 100%;
-}
+  width: 100%; }
 
 br {
-  user-select: none;
-}
+  user-select: none; }
 
 div#open-section {
   display: block;
@@ -23,95 +21,74 @@ div#open-section {
   background: grey;
   display: flex !important;
   height: 100vh;
-  justify-content: center;
-}
-div#open-section div.open-container {
-  align-self: center;
-  max-width: 50vw;
-  text-align: center;
-}
-@media only screen and (max-width: 768px), only screen and (orientation: landscape) and (max-width: 823px) {
+  justify-content: center; }
   div#open-section div.open-container {
-    margin: 0 40px;
-    max-width: none;
-  }
-}
-div#open-section div.open-container h1 {
-  display: block;
-  font-family: "Titillium Web", -apple-system, "San Francisco", "Segoe UI", "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 48px;
-  line-height: 60px;
-  margin: 0;
-  opacity: 1;
-  text-align: left;
-}
-@media only screen and (max-width: 768px), only screen and (orientation: landscape) and (max-width: 823px) {
-  div#open-section div.open-container h1 {
-    font-size: 36px;
-    line-height: 48px;
-  }
-}
-div#open-section div.open-container h1:last-of-type {
-  margin-bottom: 48px;
-}
-@media only screen and (max-width: 768px), only screen and (orientation: landscape) and (max-width: 823px) {
-  div#open-section div.open-container h1:last-of-type {
-    margin-bottom: 36px;
-  }
-}
-div#open-section div.open-container p {
-  font-family: "Roboto", -apple-system, "San Francisco", "Segoe UI", "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 18px;
-  line-height: 24px;
-  margin: 0 0 48px 0;
-  opacity: 1;
-  text-align: left;
-}
-@media only screen and (max-width: 768px), only screen and (orientation: landscape) and (max-width: 823px) {
-  div#open-section div.open-container p {
-    font-size: 16px;
-    line-height: 20px;
-    margin: 0 0 36px 0;
-  }
-}
-div#open-section div.open-container a {
-  border: black solid 1px;
-  display: inline-block;
-  padding: 0.5em 1em;
-  text-decoration: none;
-  user-select: none;
-  color: inherit;
-  font-family: "Roboto", -apple-system, "San Francisco", "Segoe UI", "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 18px;
-  line-height: 24px;
-  opacity: 1;
-  transition: background ease-in-out 400ms;
-  -moz-transition: background ease-in-out 400ms;
-  -webkit-transition: background ease-in-out 400ms;
-}
-@media only screen and (max-width: 768px), only screen and (orientation: landscape) and (max-width: 823px) {
-  div#open-section div.open-container a {
-    font-size: 16px;
-    line-height: 20px;
-  }
-}
-div#open-section div.open-container a:hover {
-  background: rgba(255, 255, 255, 0.5);
-}
-div#open-section div.open-container .hidden {
-  margin-top: -48px;
-  opacity: 0;
-  padding-bottom: 48px;
-}
-@media only screen and (max-width: 768px), only screen and (orientation: landscape) and (max-width: 823px) {
-  div#open-section div.open-container .hidden {
-    margin-top: -36px;
-    opacity: 0;
-    padding-bottom: 36px;
-  }
-}
-div#open-section div.open-container .hidden-button {
-  opacity: 0;
-}
+    align-self: center;
+    max-width: 50vw;
+    text-align: center; }
+    @media only screen and (max-width: 768px), only screen and (orientation: landscape) and (max-width: 823px) {
+      div#open-section div.open-container {
+        margin: 0 40px;
+        max-width: none; } }
+    div#open-section div.open-container h1 {
+      display: block;
+      font-family: "Titillium Web", -apple-system, "San Francisco", "Segoe UI", "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 48px;
+      line-height: 60px;
+      margin: 0;
+      opacity: 1;
+      text-align: left; }
+      @media only screen and (max-width: 768px), only screen and (orientation: landscape) and (max-width: 823px) {
+        div#open-section div.open-container h1 {
+          font-size: 36px;
+          line-height: 48px; } }
+    div#open-section div.open-container h1:last-of-type {
+      margin-bottom: 48px; }
+      @media only screen and (max-width: 768px), only screen and (orientation: landscape) and (max-width: 823px) {
+        div#open-section div.open-container h1:last-of-type {
+          margin-bottom: 36px; } }
+    div#open-section div.open-container p {
+      font-family: "Roboto", -apple-system, "San Francisco", "Segoe UI", "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 18px;
+      line-height: 24px;
+      margin: 0 0 48px 0;
+      opacity: 1;
+      text-align: left; }
+      @media only screen and (max-width: 768px), only screen and (orientation: landscape) and (max-width: 823px) {
+        div#open-section div.open-container p {
+          font-size: 16px;
+          line-height: 20px;
+          margin: 0 0 36px 0; } }
+    div#open-section div.open-container a {
+      border: black solid 1px;
+      display: inline-block;
+      padding: 0.5em 1em;
+      text-decoration: none;
+      user-select: none;
+      color: inherit;
+      font-family: "Roboto", -apple-system, "San Francisco", "Segoe UI", "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 18px;
+      line-height: 24px;
+      opacity: 1;
+      transition: background ease-in-out 400ms;
+      -moz-transition: background ease-in-out 400ms;
+      -webkit-transition: background ease-in-out 400ms; }
+      @media only screen and (max-width: 768px), only screen and (orientation: landscape) and (max-width: 823px) {
+        div#open-section div.open-container a {
+          font-size: 16px;
+          line-height: 20px; } }
+    div#open-section div.open-container a:hover {
+      background: rgba(255, 255, 255, 0.5); }
+    div#open-section div.open-container .hidden {
+      margin-top: -30px;
+      opacity: 0;
+      padding-bottom: 30px; }
+      @media only screen and (max-width: 768px), only screen and (orientation: landscape) and (max-width: 823px) {
+        div#open-section div.open-container .hidden {
+          margin-top: -20px;
+          opacity: 0;
+          padding-bottom: 20px; } }
+    div#open-section div.open-container .hidden-button {
+      opacity: 0; }
 
 /*# sourceMappingURL=main.css.map */

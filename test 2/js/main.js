@@ -1,7 +1,13 @@
 $(document).ready(() => {
-    $("#line-one").delay(400).toggleClass("hidden", 600);
-    $("#line-two").delay(800).toggleClass("hidden", 600);
-    $("#line-three").delay(1200).toggleClass("hidden", 600);
-    $("#open-body").delay(2400).toggleClass("hidden", 600);
-    $("#open-button").delay(3000).toggleClass("hidden-button", 600);
+    const baseSpeed = 500;
+    const baseDelay = 2000;
+    const inc = 200;
+    const tran = 400; 
+
+
+    $("#line-one").delay(baseSpeed).toggleClass("hidden", tran);
+    $("#line-two").delay(baseSpeed + (inc * 1)).toggleClass("hidden", tran);
+    $("#line-three").delay(baseSpeed + (inc * 2)).toggleClass("hidden", tran);
+    $("#open-body").delay(baseDelay).toggleClass("hidden", tran);
+    $("#open-button").delay(baseDelay + inc).toggleClass("hidden-button", tran);
 });
