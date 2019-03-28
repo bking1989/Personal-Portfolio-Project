@@ -19,18 +19,34 @@ div#open-section {
   width: 100%;
   align-content: center;
   background: grey;
+  background-image: url("../images/openingBG.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex !important;
   height: 100vh;
   justify-content: center; }
+  div#open-section:after {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.4);
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1; }
   div#open-section div.open-container {
     align-self: center;
     max-width: 50vw;
-    text-align: center; }
+    position: relative;
+    text-align: center;
+    z-index: 2; }
     @media only screen and (max-width: 768px), only screen and (orientation: landscape) and (max-width: 823px) {
       div#open-section div.open-container {
         margin: 0 40px;
         max-width: none; } }
     div#open-section div.open-container h1 {
+      color: white;
       display: block;
       font-family: "Titillium Web", -apple-system, "San Francisco", "Segoe UI", "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-size: 48px;
@@ -48,6 +64,7 @@ div#open-section {
         div#open-section div.open-container h1:last-of-type {
           margin-bottom: 36px; } }
     div#open-section div.open-container p {
+      color: white;
       font-family: "Roboto", -apple-system, "San Francisco", "Segoe UI", "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-size: 18px;
       line-height: 24px;
@@ -60,12 +77,14 @@ div#open-section {
           line-height: 20px;
           margin: 0 0 36px 0; } }
     div#open-section div.open-container a {
-      border: black solid 1px;
+      border: white solid 1px;
       display: inline-block;
       padding: 0.5em 1em;
+      position: relative;
       text-decoration: none;
       user-select: none;
-      color: inherit;
+      z-index: 2;
+      color: white;
       font-family: "Roboto", -apple-system, "San Francisco", "Segoe UI", "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-size: 18px;
       line-height: 24px;
@@ -78,7 +97,7 @@ div#open-section {
           font-size: 16px;
           line-height: 20px; } }
     div#open-section div.open-container a:hover {
-      background: rgba(255, 255, 255, 0.5); }
+      background: rgba(255, 255, 255, 0.3); }
     div#open-section div.open-container .hidden {
       margin-top: -30px;
       opacity: 0;

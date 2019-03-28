@@ -20,14 +20,31 @@ div#open-section {
     @include section;
     align-content: center;
     background: grey;
+    background-image: url("../images/openingBG.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex!important;
     height: 100vh;
     justify-content: center;
 
+    &:after {
+        content: "";
+        background-color: rgba(0,0,0,0.4);
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 1;
+    }
+
     div.open-container {
         align-self: center;
         max-width: 50vw;
+        position: relative;
         text-align: center;
+        z-index: 2;
 
         @media #{$mobile} {
             margin: 0 40px;
@@ -35,6 +52,7 @@ div#open-section {
         }
 
         h1 {
+            color: white;
             display: block;
             font-family: $headline-stack;
             font-size: 48px;
@@ -58,6 +76,7 @@ div#open-section {
         }
 
         p {
+            color: white;
             font-family: $body-stack;
             font-size: 18px;
             line-height: 24px;
@@ -74,7 +93,7 @@ div#open-section {
 
         a {
             @include button;
-            color: inherit;
+            color: white;
             font-family: $body-stack;
             font-size: 18px;
             line-height: 24px;
@@ -90,7 +109,7 @@ div#open-section {
         }
 
         a:hover {
-            background: rgba(255,255,255,0.5);
+            background: rgba(255,255,255,0.3);
         }
 
         .hidden {
