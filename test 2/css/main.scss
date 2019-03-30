@@ -60,6 +60,7 @@ div#open-section {
             margin: 0;
             opacity: 1;
             text-align: left;
+            text-shadow: rgba(0,0,0,0.5) 3px 3px 0px;
 
             @media #{$mobile} {
                 font-size: 36px;
@@ -83,6 +84,7 @@ div#open-section {
             margin: 0 0 48px 0;
             opacity: 1;
             text-align: left;
+            text-shadow: rgba(0,0,0,0.5) 2px 2px 0px;
 
             @media #{$mobile} {
                 font-size: 16px;
@@ -98,6 +100,7 @@ div#open-section {
             font-size: 18px;
             line-height: 24px;
             opacity: 1;
+            text-shadow: rgba(0,0,0,0.5) 2px 2px 1px;
             transition: background ease-in-out 400ms;
             -moz-transition: background ease-in-out 400ms;
             -webkit-transition: background ease-in-out 400ms;
