@@ -16,6 +16,24 @@ br {
     user-select: none;
 }
 
+div.container {
+    display: flex;
+    margin: 0 auto;
+
+    @media screen and (min-width: 901px) {
+        width: 1024px;
+    }
+
+    @media screen and (min-width: 801px) and (max-width: 900px) {
+        width: 900px;
+    }
+
+    @media screen and (max-width: 800px) {
+        margin: 0 20px!important;
+        width: auto;
+    }
+}
+
 div#open-section {
     @include section;
     align-content: center;
@@ -129,6 +147,44 @@ div#open-section {
 
         .hidden-button {
             opacity: 0;
+        }
+    }
+}
+
+div#about-section {
+    @include section;
+
+    div.container h1 {
+        font-family: $headline-stack;
+    }
+
+    div.container div#left-col {
+        align-self: flex-start;
+        display: block;
+        order: 2;
+        width: 75%;
+    }
+
+    div.container div#right-col {
+        align-self: flex-end;
+        display: block;
+        order: 1;
+        width: 25%;
+
+        @media #{$mobile} {
+            align-self: auto;
+            width: auto;
+        }
+
+        div#about-img {
+            display: block;
+            background-image: url('https://via.placeholder.com/250');
+            background-repeat: no-repeat;
+            height: 250px;
+            width: 250px;
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
         }
     }
 }
