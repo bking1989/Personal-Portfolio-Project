@@ -1,0 +1,14 @@
+// Media Queries
+$mobile: "only screen and (max-width: 767px) and (orientation: portrait)";
+$mobileAlt: "only screen and (max-width: 823px) and (orientation: landscape)";
+$tablet: "only screen and (min-width: 768px) and (max-width: 1024px)";
+$widescreen: "only screen and (min-width: 1400px)";
+
+// Sections
+@mixin section {
+    display: block;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 100%;
+}
