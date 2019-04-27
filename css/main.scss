@@ -73,7 +73,7 @@ div#landing {
     background-position: center;
     background-size: cover;
     display: grid;
-    height: 100vh;
+    height: calc(100vh - 30px);
     justify-items: center;
     position: relative;
     width: 100%;
