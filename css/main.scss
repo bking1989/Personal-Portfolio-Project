@@ -3,12 +3,12 @@
 
 // Body
 body {
+    background: black;
     height: 100%;
     margin: 0;
     padding: 0;
     position: relative;
     width: 100%;
-    background: black;
 }
 
 br {
@@ -145,7 +145,8 @@ div#landing {
 
 // About Me
 div#about {
-    background: $navy-blue;
+    background-image: url("../images/about_bg.webp");
+    background-repeat: repeat;
     display: grid;
     grid-template-columns: 60px auto 60px;
     grid-template-rows: 60px 240px auto 60px;
@@ -177,6 +178,18 @@ div#about {
         right: 0;
         top: 0;
         width: 3px;
+        z-index: 2;
+    }
+
+    &:after {
+        content: "";
+        background: rgba(0,0,0,0.1);
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 1;
     }
 
     div#picture {
@@ -202,7 +215,9 @@ div#about {
         background: $white;
         grid-column: 2;
         grid-row: 3;
-        padding: 0 0 60px 0;
+        padding: 0 0 30px 0;
+        position: relative;
+        z-index: 2;
 
         &:before {
             content: "";
@@ -224,6 +239,10 @@ div#about {
             }
         }
 
+        @media #{$mobile} {
+            padding: 0 0 30px ;
+        }
+
         h1 {
             color: $royal-red;
             display: block;
@@ -240,6 +259,43 @@ div#about {
 
             @media #{$mobileAlt}, #{$tablet} {
                 margin: 15px 30px;
+            }
+        }
+
+        h2 {
+            color: $navy-blue;
+            font-family: $body;
+            font-size: 24px;
+            font-style: italic;
+            font-weight: 300;
+            line-height: 32px;
+            margin: 60px 120px 30px;
+            overflow-wrap: break-word;
+            text-align: center;
+
+            @media #{$mobile}, #{$mobileAlt} {
+                font-size: 20px;
+                line-height: 32px;
+                margin: 30px;
+            }
+
+            span {
+                display: inline-block;
+                position: relative;
+                z-index: inherit;
+
+                &:before {
+                    content: "";
+                    background: $royal-red;
+                    bottom: 0;
+                    left: 0;
+                    margin: 0 -3px -3px;
+                    opacity: 0.3;
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    z-index: -1;
+                }
             }
         }
 
@@ -283,10 +339,6 @@ div#about {
             }
         }
 
-        @media #{$mobile} {
-            padding: 0 0 30px ;
-        }
-
         ul {
             -moz-column-count: 3;
             -moz-column-gap: 60px;
@@ -296,7 +348,7 @@ div#about {
             column-gap: 60px;
             list-style-position: inside;
             list-style-type: none;
-            margin: 0 60px;
+            margin: 0 60px 30px;
 
             @media #{$mobile} {
                 -moz-column-count: 2;
@@ -308,7 +360,7 @@ div#about {
             }
 
             @media #{$mobile}, #{$mobileAlt}, #{$tablet} {
-                margin: 0 30px;
+                margin: 0 30px 30px;
             }
 
             li {
@@ -320,12 +372,40 @@ div#about {
                 i {
                     color: $royal-red;
                     font-size: 20px;
-                    margin: 0 0.25em 0 0;
                     line-height: 24px;
+                    margin: 0 0.5em 0 0;
                 }
 
                 @media #{$mobile}, #{$mobileAlt} {
                     font-size: 16px;
+                }
+            }
+        }
+
+        div.button {
+            margin: 60px 60px 30px;
+            text-align: center;
+
+            @media #{$mobile}, #{$mobileAlt} {
+                margin: 30px;
+            }
+
+            a {
+                background: $royal-red;
+                color: $white;
+                display: inline-block;
+                font-family: $body;
+                font-size: 24px;
+                font-weight: 300;
+                padding: 0.5em 1em;
+                text-decoration: none;
+
+                i {
+                    margin-right: 0.5em;
+                }
+
+                @media #{$mobile}, #{$mobileAlt} {
+                    font-size: 20px;
                 }
             }
         }
