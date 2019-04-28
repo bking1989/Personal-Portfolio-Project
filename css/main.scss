@@ -269,6 +269,10 @@ div#about {
                 line-height: 24px;
                 text-align: justify;
 
+                @media #{$mobile}, #{$mobileAlt} {
+                    font-size: 16px;
+                }
+
                 @media #{$mobile}, #{$mobileAlt}, #{$tablet} {
                     text-align: left;
 
@@ -281,6 +285,27 @@ div#about {
 
         @media #{$mobile} {
             padding: 0 0 30px ;
+        }
+
+        ul {
+            list-style-position: inside;
+            list-style-type: none;
+            margin: 0 60px;
+
+            @media #{$mobile}, #{$mobileAlt}, #{$tablet} {
+                margin: 0 30px;
+            }
+
+            li {
+                color: $navy-blue;
+                font-family: $body;
+                font-size: 18px;
+                line-height: 24px;
+
+                @media #{$mobile}, #{$mobileAlt} {
+                    font-size: 16px;
+                } 
+            }
         }
     }
 }

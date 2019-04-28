@@ -262,6 +262,9 @@ div#about {
         font-size: 18px;
         line-height: 24px;
         text-align: justify; }
+        @media only screen and (max-width: 767px) and (orientation: portrait), only screen and (max-width: 823px) and (orientation: landscape) {
+          div#about div#content div.row p {
+            font-size: 16px; } }
         @media only screen and (max-width: 767px) and (orientation: portrait), only screen and (max-width: 823px) and (orientation: landscape), only screen and (min-width: 768px) and (max-width: 1024px) {
           div#about div#content div.row p {
             text-align: left; }
@@ -270,5 +273,20 @@ div#about {
     @media only screen and (max-width: 767px) and (orientation: portrait) {
       div#about div#content {
         padding: 0 0 30px; } }
+    div#about div#content ul {
+      list-style-position: inside;
+      list-style-type: none;
+      margin: 0 60px; }
+      @media only screen and (max-width: 767px) and (orientation: portrait), only screen and (max-width: 823px) and (orientation: landscape), only screen and (min-width: 768px) and (max-width: 1024px) {
+        div#about div#content ul {
+          margin: 0 30px; } }
+      div#about div#content ul li {
+        color: #011627;
+        font-family: "Roboto", -apple-system, "San Francisco", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 18px;
+        line-height: 24px; }
+        @media only screen and (max-width: 767px) and (orientation: portrait), only screen and (max-width: 823px) and (orientation: landscape) {
+          div#about div#content ul li {
+            font-size: 16px; } }
 
 /*# sourceMappingURL=main.css.map */
