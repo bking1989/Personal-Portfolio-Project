@@ -228,13 +228,13 @@ div#about {
             color: $royal-red;
             display: block;
             font-family: $header;
-            font-size: 56px;
+            font-size: 48px;
             font-weight: 700;
             margin: 15px 60px;
 
             @media #{$mobile} {
-                font-size: 48px;
-                margin: 23px 30px;
+                font-size: 40px;
+                margin: 19px 30px;
                 text-align: center;
             }
 
@@ -250,7 +250,7 @@ div#about {
             -webkit-column-gap: 60px;
             column-count: 2;
             column-gap: 60px;
-            margin: 0 60px;
+            margin: 0 60px 30px;
 
             @media #{$mobile}, #{$mobileAlt}, #{$tablet} {
                 -moz-column-count: 1;
@@ -259,7 +259,7 @@ div#about {
                 -webkit-column-gap: initial;
                 column-count: 1;
                 column-gap: initial;
-                margin: 0 30px;
+                margin: 0 30px 30px;
             }
 
             p {
@@ -288,9 +288,24 @@ div#about {
         }
 
         ul {
+            -moz-column-count: 3;
+            -moz-column-gap: 60px;
+            -webkit-column-count: 3;
+            -webkit-column-gap: 60px;
+            column-count: 3;
+            column-gap: 60px;
             list-style-position: inside;
             list-style-type: none;
             margin: 0 60px;
+
+            @media #{$mobile} {
+                -moz-column-count: 2;
+                -moz-column-gap: 30px;
+                -webkit-column-count: 2;
+                -webkit-column-gap: 30px;
+                column-count: 2;
+                column-gap: 30px;
+            }
 
             @media #{$mobile}, #{$mobileAlt}, #{$tablet} {
                 margin: 0 30px;
@@ -302,9 +317,16 @@ div#about {
                 font-size: 18px;
                 line-height: 24px;
 
+                i {
+                    color: $royal-red;
+                    font-size: 20px;
+                    margin: 0 0.25em 0 0;
+                    line-height: 24px;
+                }
+
                 @media #{$mobile}, #{$mobileAlt} {
                     font-size: 16px;
-                } 
+                }
             }
         }
     }
