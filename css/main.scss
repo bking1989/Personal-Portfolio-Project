@@ -414,6 +414,8 @@ div#about {
 
 // Past Projects
 div#work {
+    background-color: $navy-blue;
+    background-image: url("../images/projects_bg.webp");
     display: grid;
     grid-template-columns: 60px auto 60px;
     grid-template-rows: 60px repeat(4, auto) 60px;
@@ -422,10 +424,25 @@ div#work {
     width: 100%;
     z-index: 1;
 
+    &:after {
+        content: "";
+        background: $navy-blue;
+        bottom: 0;
+        display: block;
+        left: 0;
+        margin: auto;
+        opacity: 0.5;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
     div.header {
         grid-column: 2;
         grid-row: 2;
         margin: 0 60px 30px;
+        position: relative;
+        z-index: 2;
 
         h1 {
             color: $royal-red;
@@ -464,6 +481,7 @@ div#work {
         margin: 0 60px 30px;
         overflow: auto;
         position: relative;
+        z-index: 2;
 
         h1 {
             color: $royal-red;
