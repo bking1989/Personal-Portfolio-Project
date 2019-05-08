@@ -461,11 +461,9 @@ div#work {
 
     div.project-card {
         background-color: $white;
-        min-height: 300px;
-        position: relative;
         margin: 0 60px;
-        border-radius: 0 0 8px 8px;
         overflow: auto;
+        position: relative;
 
         h1 {
             color: $royal-red;
@@ -556,6 +554,34 @@ div#work {
         &:nth-of-type(2) {
             grid-column: 2;
             grid-row: 3;
+
+            &:before {
+                content: "";
+                background-color: $royal-red;
+                background-image: url("../images/project_fridge.webp");
+                background-position: 50% -140px;
+                background-repeat: no-repeat;
+                display: block;
+                height: 200px;
+                margin: 0 auto;
+                position: relative;
+                width: 100%;
+
+                @media #{$mobile} {
+                    background-position: center;
+                    background-size: calc(100% + 80px) auto;
+                }
+
+                @media #{$mobileAlt} {
+                    background-position: 50% -70px;
+                    background-size: calc(100% + 60px) auto;
+                }
+
+                @media #{$tablet} {
+                    background-position: 50% -80px;
+                    background-size: calc(100% + 80px) auto;
+                }
+            }
         }
 
         @media #{$mobile}, #{$mobileAlt}, #{$tablet} {
