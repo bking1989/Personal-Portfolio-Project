@@ -523,11 +523,21 @@ div#work {
                     i {
                         color: $royal-red;
                         margin: 0 0.5em 0 0;
+                        line-height: 36px;
+
+                        @media #{$mobile}, #{$mobileAlt} {
+                            line-height: 32px;
+                        }
                     }
 
                     b {
                         color: $royal-red;
                         font-weight: 700;
+                        line-height: 36px;
+
+                        @media #{$mobile}, #{$mobileAlt} {
+                            line-height: 32px;
+                        }
                     }
 
                     a {
