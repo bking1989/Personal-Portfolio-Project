@@ -416,7 +416,7 @@ div#about {
 div#work {
     display: grid;
     grid-template-columns: 60px auto 60px;
-    grid-template-rows: 60px auto auto 60px;
+    grid-template-rows: 60px repeat(4, auto) 60px;
     overflow: auto;
     position: relative;
     width: 100%;
@@ -461,7 +461,7 @@ div#work {
 
     div.project-card {
         background-color: $white;
-        margin: 0 60px;
+        margin: 0 60px 30px;
         overflow: auto;
         position: relative;
 
@@ -471,18 +471,18 @@ div#work {
             font-family: $header;
             font-size: 48px;
             font-weight: 700;
-            margin: 15px 60px;
+            margin: 30px 60px 15px;
 
             @media #{$mobile} {
                 font-size: 40px;
-                margin: 15px 30px;
+                margin: 30px 30px 15px;
                 text-align: center;
             }
         }
 
         div.row {
             display: grid;
-            grid-template-columns: 60px calc(50% - 75px) 30px calc(50% - 75px) 60px;
+            grid-template-columns: 60px calc(50% - 90px) 60px calc(50% - 90px) 60px;
             grid-template-rows: auto;
             margin: 30px 0;
 
@@ -549,6 +549,10 @@ div#work {
             @media #{$mobileAlt} {
                 grid-template-columns: 60px calc(50% - 70px) 20px calc(50% - 70px) 60px;
             }
+
+            @media #{$tablet} {
+                grid-template-columns: 60px calc(50% - 75px) 30px calc(50% - 75px) 60px;
+            }
         }
 
         &:nth-of-type(2) {
@@ -556,9 +560,75 @@ div#work {
             grid-row: 3;
         }
 
-        &.fridge:before {
+        &:nth-of-type(3) {
+            grid-column: 2;
+            grid-row: 4;
+        }
+
+        &:nth-of-type(4) {
+            grid-column: 2;
+            grid-row: 5;
+        }
+
+        &.bamazon:before {
+            content: "";
+            background-color: $light-teal;
+            background-image: url("../images/project_bamazon.webp");
+            background-position: 50% -140px;
+            background-repeat: no-repeat;
+            display: block;
+            height: 200px;
+            margin: 0 auto;
+            position: relative;
+            width: 100%;
+
+            @media #{$mobile} {
+                background-position: center;
+                background-size: calc(100% + 80px) auto;
+            }
+
+            @media #{$mobileAlt} {
+                background-position: 50% -70px;
+                background-size: calc(100% + 60px) auto;
+            }
+
+            @media #{$tablet} {
+                background-position: 50% -80px;
+                background-size: calc(100% + 80px) auto;
+            }
+        }
+
+        &.book:before {
             content: "";
             background-color: $royal-red;
+            background-image: url("../images/project_book.webp");
+            background-position: 50% -140px;
+            background-repeat: no-repeat;
+            display: block;
+            height: 200px;
+            margin: 0 auto;
+            position: relative;
+            width: 100%;
+
+            @media #{$mobile} {
+                background-position: center;
+                background-size: calc(100% + 80px) auto;
+            }
+
+            @media #{$mobileAlt} {
+                background-position: 50% -70px;
+                background-size: calc(100% + 60px) auto;
+            }
+
+            @media #{$tablet} {
+                background-position: 50% -80px;
+                background-size: calc(100% + 80px) auto;
+            }
+        }
+
+        &.fridge:before {
+            content: "";
+            background-color: $yellow;
             background-image: url("../images/project_fridge.webp");
             background-position: 50% -140px;
             background-repeat: no-repeat;
@@ -584,18 +654,22 @@ div#work {
             }
         }
 
-        @media #{$mobile}, #{$mobileAlt}, #{$tablet} {
-            margin: 0;
+        @media #{$mobile} {
+            margin: 0 0 15px 0;
+        }
+
+        @media #{$mobileAlt}, #{$tablet} {
+            margin: 0 0 30px 0;
         }
     }
 
     @media #{$mobile} {
         grid-template-columns: 45px auto 45px;
-        grid-template-rows: 60px auto auto 45px;
+        grid-template-rows: 60px repeat(4, auto) 45px;
     }
 
     @media #{$mobileAlt} {
-        grid-template-rows: 60px auto auto 60px;
+        grid-template-rows: 60px repeat(4, auto) 60px;
     }
 
     @media #{$widescreen} {
