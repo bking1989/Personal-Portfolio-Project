@@ -418,7 +418,7 @@ div#work {
     background-image: url("../images/projects_bg.webp");
     display: grid;
     grid-template-columns: 60px auto 60px;
-    grid-template-rows: 60px repeat(4, auto) 60px;
+    grid-template-rows: 60px repeat(6, auto) 60px;
     overflow: auto;
     position: relative;
     width: 100%;
@@ -586,21 +586,50 @@ div#work {
         &:nth-of-type(2) {
             grid-column: 2;
             grid-row: 3;
+
+            &:before {
+                background-color: $royal-red;
+            }
         }
 
         &:nth-of-type(3) {
             grid-column: 2;
             grid-row: 4;
+
+            &:before {
+                background-color: $yellow;
+            }
         }
 
         &:nth-of-type(4) {
             grid-column: 2;
             grid-row: 5;
+
+            &:before {
+                background-color: $light-teal;
+            }
+        }
+
+        &:nth-of-type(5) {
+            grid-column: 2;
+            grid-row: 6;
+
+            &:before {
+                background-color: $navy-blue;
+            }
+        }
+
+        &:nth-of-type(6) {
+            grid-column: 2;
+            grid-row: 7;
+
+            &:before {
+                background-color: $royal-red;
+            }
         }
 
         &.bamazon:before {
             content: "";
-            background-color: $light-teal;
             background-image: url("../images/project_bamazon.webp");
             background-position: 50% -140px;
             background-repeat: no-repeat;
@@ -628,7 +657,6 @@ div#work {
 
         &.book:before {
             content: "";
-            background-color: $royal-red;
             background-image: url("../images/project_book.webp");
             background-position: 50% -140px;
             background-repeat: no-repeat;
@@ -656,8 +684,61 @@ div#work {
 
         &.fridge:before {
             content: "";
-            background-color: $yellow;
             background-image: url("../images/project_fridge.webp");
+            background-position: 50% -140px;
+            background-repeat: no-repeat;
+            display: block;
+            height: 200px;
+            margin: 0 auto;
+            position: relative;
+            width: 100%;
+
+            @media #{$mobile} {
+                background-position: center;
+                background-size: calc(100% + 80px) auto;
+            }
+
+            @media #{$mobileAlt} {
+                background-position: 50% -70px;
+                background-size: calc(100% + 60px) auto;
+            }
+
+            @media #{$tablet} {
+                background-position: 50% -80px;
+                background-size: calc(100% + 80px) auto;
+            }
+        }
+
+        &.giphy:before {
+            content: "";
+            background-image: url("../images/project_giphy.webp");
+            background-position: 50% -140px;
+            background-repeat: no-repeat;
+            display: block;
+            height: 200px;
+            margin: 0 auto;
+            position: relative;
+            width: 100%;
+
+            @media #{$mobile} {
+                background-position: center;
+                background-size: calc(100% + 80px) auto;
+            }
+
+            @media #{$mobileAlt} {
+                background-position: 50% -70px;
+                background-size: calc(100% + 60px) auto;
+            }
+
+            @media #{$tablet} {
+                background-position: 50% -80px;
+                background-size: calc(100% + 80px) auto;
+            }
+        }
+
+        &.scrape:before {
+            content: "";
+            background-image: url("../images/project_scrape.webp");
             background-position: 50% -140px;
             background-repeat: no-repeat;
             display: block;
@@ -693,11 +774,11 @@ div#work {
 
     @media #{$mobile} {
         grid-template-columns: 45px auto 45px;
-        grid-template-rows: 60px repeat(4, auto) 45px;
+        grid-template-rows: 60px repeat(6, auto) 45px;
     }
 
     @media #{$mobileAlt} {
-        grid-template-rows: 60px repeat(4, auto) 60px;
+        grid-template-rows: 60px repeat(6, auto) 60px;
     }
 
     @media #{$widescreen} {
