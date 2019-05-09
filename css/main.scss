@@ -418,7 +418,7 @@ div#work {
     background-image: url("../images/projects_bg.webp");
     display: grid;
     grid-template-columns: 60px auto 60px;
-    grid-template-rows: 60px repeat(6, auto) 60px;
+    grid-template-rows: 60px repeat(6, auto) 30px;
     overflow: auto;
     position: relative;
     width: 100%;
@@ -590,6 +590,14 @@ div#work {
             &:before {
                 background-color: $royal-red;
             }
+
+            @media #{$mobile} {
+                margin: 0 0 15px 0;
+            }
+
+            @media #{$mobileAlt}, #{$tablet} {
+                margin: 0 0 30px 0;
+            }
         }
 
         &:nth-of-type(3) {
@@ -598,6 +606,14 @@ div#work {
 
             &:before {
                 background-color: $yellow;
+            }
+
+            @media #{$mobile} {
+                margin: 0 0 15px 0;
+            }
+
+            @media #{$mobileAlt}, #{$tablet} {
+                margin: 0 0 30px 0;
             }
         }
 
@@ -608,6 +624,14 @@ div#work {
             &:before {
                 background-color: $light-teal;
             }
+
+            @media #{$mobile} {
+                margin: 0 0 15px 0;
+            }
+
+            @media #{$mobileAlt}, #{$tablet} {
+                margin: 0 0 30px 0;
+            }
         }
 
         &:nth-of-type(5) {
@@ -615,7 +639,15 @@ div#work {
             grid-row: 6;
 
             &:before {
-                background-color: $navy-blue;
+                background-color: $royal-red;
+            }
+
+            @media #{$mobile} {
+                margin: 0 0 15px 0;
+            }
+
+            @media #{$mobileAlt}, #{$tablet} {
+                margin: 0 0 30px 0;
             }
         }
 
@@ -624,7 +656,15 @@ div#work {
             grid-row: 7;
 
             &:before {
-                background-color: $royal-red;
+                background-color: $yellow;
+            }
+
+            @media #{$mobile} {
+                margin: 0;
+            }
+
+            @media #{$mobileAlt}, #{$tablet} {
+                margin: 0;
             }
         }
 
@@ -762,23 +802,49 @@ div#work {
                 background-size: calc(100% + 80px) auto;
             }
         }
-
-        @media #{$mobile} {
-            margin: 0 0 15px 0;
-        }
-
-        @media #{$mobileAlt}, #{$tablet} {
-            margin: 0 0 30px 0;
-        }
     }
 
     @media #{$mobile} {
         grid-template-columns: 45px auto 45px;
-        grid-template-rows: 60px repeat(6, auto) 45px;
+        grid-template-rows: 60px repeat(6, auto) 15px;
     }
 
     @media #{$mobileAlt} {
-        grid-template-rows: 60px repeat(6, auto) 60px;
+        grid-template-rows: 60px repeat(6, auto) 15px;
+    }
+
+    @media #{$widescreen} {
+        grid-template-columns: auto 1280px auto;
+    }
+}
+
+// Contact Me
+div#contact {
+    background-color: $navy-blue;
+    display: grid;
+    grid-template-columns: 60px auto 60px;
+    grid-template-rows: 60px auto 60px;
+    overflow: auto;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+
+    div.content {
+        background: $white;
+        grid-column: 2;
+        grid-row: 2;
+        position: relative;
+        z-index: 2;
+        min-height: 300px;
+    }
+
+    @media #{$mobile} {
+        grid-template-columns: 45px auto 45px;
+        grid-template-rows: 60px auto 45px;
+    }
+
+    @media #{$mobileAlt} {
+        grid-template-rows: 60px auto 60px;
     }
 
     @media #{$widescreen} {
