@@ -219,6 +219,10 @@ div#about {
         position: relative;
         z-index: 2;
 
+        @media #{$mobile} {
+            padding: 0 0 30px ;
+        }
+
         &:before {
             content: "";
             background-color: $white;
@@ -237,10 +241,6 @@ div#about {
                 height: 80px;
                 margin: -80px 0 0 0;
             }
-        }
-
-        @media #{$mobile} {
-            padding: 0 0 30px ;
         }
 
         h1 {
@@ -418,11 +418,24 @@ div#work {
     background-image: url("../images/projects_bg.webp");
     display: grid;
     grid-template-columns: 60px auto 60px;
-    grid-template-rows: 60px repeat(6, auto) 30px;
+    grid-template-rows: 60px repeat(6, auto) 60px;
     overflow: auto;
     position: relative;
     width: 100%;
     z-index: 1;
+
+    @media #{$mobile} {
+        grid-template-columns: 45px auto 45px;
+        grid-template-rows: 60px repeat(6, auto) 15px;
+    }
+
+    @media #{$mobileAlt} {
+        grid-template-rows: 60px repeat(6, auto) 30px;
+    }
+
+    @media #{$widescreen} {
+        grid-template-columns: auto 1280px auto;
+    }
 
     &:after {
         content: "";
@@ -504,6 +517,19 @@ div#work {
             grid-template-rows: auto;
             margin: 30px 0 60px;
 
+            @media #{$mobile} {
+                grid-template-columns: 30px auto 30px;
+                grid-template-rows: auto auto;
+            }
+
+            @media #{$mobileAlt} {
+                grid-template-columns: 60px calc(50% - 70px) 20px calc(50% - 70px) 60px;
+            }
+
+            @media #{$tablet} {
+                grid-template-columns: 60px calc(50% - 75px) 30px calc(50% - 75px) 60px;
+            }
+
             ul {
                 grid-column: 2;
                 grid-row: 1;
@@ -568,28 +594,11 @@ div#work {
                     font-size: 16px;
                 }
             }
-
-            @media #{$mobile} {
-                grid-template-columns: 30px auto 30px;
-                grid-template-rows: auto auto;
-            }
-
-            @media #{$mobileAlt} {
-                grid-template-columns: 60px calc(50% - 70px) 20px calc(50% - 70px) 60px;
-            }
-
-            @media #{$tablet} {
-                grid-template-columns: 60px calc(50% - 75px) 30px calc(50% - 75px) 60px;
-            }
         }
 
         &:nth-of-type(2) {
             grid-column: 2;
             grid-row: 3;
-
-            &:before {
-                background-color: $royal-red;
-            }
 
             @media #{$mobile} {
                 margin: 0 0 15px 0;
@@ -597,6 +606,10 @@ div#work {
 
             @media #{$mobileAlt}, #{$tablet} {
                 margin: 0 0 30px 0;
+            }
+
+            &:before {
+                background-color: $royal-red;
             }
         }
 
@@ -604,16 +617,16 @@ div#work {
             grid-column: 2;
             grid-row: 4;
 
-            &:before {
-                background-color: $yellow;
-            }
-
             @media #{$mobile} {
                 margin: 0 0 15px 0;
             }
 
             @media #{$mobileAlt}, #{$tablet} {
                 margin: 0 0 30px 0;
+            }
+
+            &:before {
+                background-color: $yellow;
             }
         }
 
@@ -621,16 +634,16 @@ div#work {
             grid-column: 2;
             grid-row: 5;
 
-            &:before {
-                background-color: $light-teal;
-            }
-
             @media #{$mobile} {
                 margin: 0 0 15px 0;
             }
 
             @media #{$mobileAlt}, #{$tablet} {
                 margin: 0 0 30px 0;
+            }
+
+            &:before {
+                background-color: $light-teal;
             }
         }
 
@@ -638,10 +651,6 @@ div#work {
             grid-column: 2;
             grid-row: 6;
 
-            &:before {
-                background-color: $royal-red;
-            }
-
             @media #{$mobile} {
                 margin: 0 0 15px 0;
             }
@@ -649,15 +658,16 @@ div#work {
             @media #{$mobileAlt}, #{$tablet} {
                 margin: 0 0 30px 0;
             }
+
+            &:before {
+                background-color: $royal-red;
+            }
         }
 
         &:nth-of-type(6) {
             grid-column: 2;
             grid-row: 7;
-
-            &:before {
-                background-color: $yellow;
-            }
+            margin-bottom: 0;
 
             @media #{$mobile} {
                 margin: 0;
@@ -665,6 +675,10 @@ div#work {
 
             @media #{$mobileAlt}, #{$tablet} {
                 margin: 0;
+            }
+
+            &:before {
+                background-color: $yellow;
             }
         }
 
@@ -803,19 +817,6 @@ div#work {
             }
         }
     }
-
-    @media #{$mobile} {
-        grid-template-columns: 45px auto 45px;
-        grid-template-rows: 60px repeat(6, auto) 15px;
-    }
-
-    @media #{$mobileAlt} {
-        grid-template-rows: 60px repeat(6, auto) 15px;
-    }
-
-    @media #{$widescreen} {
-        grid-template-columns: auto 1280px auto;
-    }
 }
 
 // Contact Me
@@ -823,20 +824,11 @@ div#contact {
     background-color: $navy-blue;
     display: grid;
     grid-template-columns: 60px auto 60px;
-    grid-template-rows: 60px auto 60px;
+    grid-template-rows: 60px auto 90px;
     overflow: auto;
     position: relative;
     width: 100%;
     z-index: 1;
-
-    div.content {
-        background: $white;
-        grid-column: 2;
-        grid-row: 2;
-        position: relative;
-        z-index: 2;
-        min-height: 300px;
-    }
 
     @media #{$mobile} {
         grid-template-columns: 45px auto 45px;
@@ -849,5 +841,157 @@ div#contact {
 
     @media #{$widescreen} {
         grid-template-columns: auto 1280px auto;
+    }
+
+    div.content {
+        background-color: $white;
+        grid-column: 2;
+        grid-row: 2;
+        margin: 0 60px;
+        overflow: auto;
+        position: relative;
+        z-index: 2;
+
+        @media #{$mobile}, #{$mobileAlt}, #{$tablet} {
+            margin: 0;
+        }
+
+        h1 {
+            color: $royal-red;
+            display: block;
+            font-family: $header;
+            font-size: 48px;
+            font-weight: 700;
+            margin: 30px 60px 15px;
+
+            @media #{$mobile} {
+                font-size: 40px;
+                text-align: center;
+            }
+        }
+
+        div.row {
+            display: grid;
+            grid-template-columns: 60px calc(50% - 90px) 60px calc(50% - 90px) 60px;
+            grid-template-rows: auto;
+            margin: 30px 0 60px;
+
+            @media #{$mobile} {
+                grid-template-columns: 30px auto 30px;
+                grid-template-rows: auto auto;
+            }
+
+            @media #{$mobileAlt} {
+                grid-template-columns: 60px calc(50% - 70px) 20px calc(50% - 70px) 60px;
+            }
+
+            @media #{$tablet} {
+                grid-template-columns: 60px calc(50% - 75px) 30px calc(50% - 75px) 60px;
+            }
+
+            @media #{$mobile} {
+                    margin-bottom: 30px;
+            }
+
+            ul {
+                grid-column: 2;
+                grid-row: 1;
+                list-style-position: inside;
+                list-style-type: none;
+
+                @media #{$mobile} {
+                    margin-bottom: 30px;
+                }
+
+                li {
+                    color: $navy-blue;
+                    font-family: $body;
+                    font-size: 18px;
+                    line-height: 24px;
+
+                    @media #{$mobile}, #{$mobileAlt} {
+                        font-size: 16px;
+                    }
+
+                    i {
+                        color: $royal-red;
+                        line-height: 36px;
+                        margin: 0 0.5em 0 0;
+
+                        @media #{$mobile}, #{$mobileAlt} {
+                            line-height: 32px;
+                        }
+                    }
+
+                    b {
+                        color: $royal-red;
+                        font-weight: 700;
+                        line-height: 36px;
+
+                        @media #{$mobile}, #{$mobileAlt} {
+                            line-height: 32px;
+                        }
+                    }
+
+                    a {
+                        color: $navy-blue;
+                    }
+                }
+            }
+
+            form {
+                grid-column: 4;
+                grid-row: 1;
+
+                input {
+                    display: block;
+                    font-family: $body;
+                    font-size: 18px;
+                    line-height: 36px;
+                    margin-bottom: 18px;
+                    padding: 0 6px;
+                    width: calc(100% - 12px);
+
+                    @media #{$mobile}, #{$mobileAlt} {
+                        font-size: 16px;
+                        line-height: 32px;
+                    }
+                }
+
+                textarea {
+                    display: block;
+                    font-family: $body;
+                    font-size: 18px;
+                    height: 200px;
+                    line-height: 24px;
+                    margin-bottom: 18px;
+                    padding: 0 6px;
+                    width: calc(100% - 12px);
+
+                    @media #{$mobile}, #{$mobileAlt} {
+                        font-size: 16px;
+                        line-height: 32px;
+                    }
+                }
+
+                button {
+                    font-family: $body;
+                    font-size: 18px;
+                    height: 36px;
+                    padding: 0 18px;
+
+                    @media #{$mobile}, #{$mobileAlt} {
+                        font-size: 16px;
+                        height: 32px;
+                    }
+                }
+
+                @media #{$mobile} {
+                    grid-column: 2;
+                    grid-row: 2;
+                    text-align: center;
+                }
+            }
+        }
     }
 }
