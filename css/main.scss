@@ -69,6 +69,7 @@ div#bottomBorder {
 // Landing
 div#landing {
     align-items: center;
+    background-attachment: fixed;
     background-image: url("../images/landing_bg.webp");
     background-position: center;
     background-size: cover;
@@ -93,7 +94,7 @@ div#landing {
         z-index: 1;
     }
 
-    &:after {
+    div#guide {
         content: "";
         background: $white;
         bottom: 0;
@@ -107,6 +108,10 @@ div#landing {
 
         @media #{$mobileAlt} {
             height: 20%;
+        }
+
+        &.animation {
+            height: 10%;
         }
     }
 
