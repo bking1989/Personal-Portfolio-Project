@@ -1,4 +1,13 @@
 $(document).ready(function() {
+    // Navigation Menu Toggle
+    $("div#toggle").on("click", function() {
+        let rightVal = $("div#menu").css("right");
+
+        if (rightVal == "-320px") {
+            $("div#menu").animate({"right": 0}, 200);
+        };
+    });
+
     // Smooth Scroll for Links
     $('a[href*="#"]')
     .not('[href="#"]')
