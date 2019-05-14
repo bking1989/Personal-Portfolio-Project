@@ -245,6 +245,10 @@ div#landing {
             text-align: center;
             text-decoration: none;
 
+            i {
+                margin: 0 0.5em 0 0;
+            }
+
             @media #{$mobile}, #{$mobileAlt} {
                 font-size: 24px;
                 margin: 36px 0 0 0;
@@ -524,8 +528,12 @@ div#about {
 
 // Past Projects
 div#work {
+    background-attachment: fixed;
     background-color: $navy-blue;
     background-image: url("../images/projects_bg.webp");
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
     display: grid;
     grid-template-columns: 60px auto 60px;
     grid-template-rows: 60px repeat(6, auto) 60px;
@@ -554,7 +562,7 @@ div#work {
         display: block;
         left: 0;
         margin: auto;
-        opacity: 0.4;
+        opacity: 0.75;
         position: absolute;
         right: 0;
         top: 0;
@@ -932,6 +940,7 @@ div#work {
 // Contact Me
 div#contact {
     background-color: $navy-blue;
+    background-image: url("../images/contact_bg.webp");
     display: grid;
     grid-template-columns: 60px auto 60px;
     grid-template-rows: 60px auto 90px;
@@ -939,6 +948,19 @@ div#contact {
     position: relative;
     width: 100%;
     z-index: 1;
+
+    &:after {
+        content: "";
+        background: $navy-blue;
+        bottom: 0;
+        display: block;
+        left: 0;
+        margin: auto;
+        opacity: 0.4;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
 
     @media #{$mobile} {
         grid-template-columns: 45px auto 45px;
@@ -978,6 +1000,10 @@ div#contact {
                 font-size: 40px;
                 text-align: center;
             }
+
+            @media #{$mobileAlt} {
+                margin: 30px 30px 15px;
+            }
         }
 
         div.row {
@@ -986,21 +1012,18 @@ div#contact {
             grid-template-rows: auto;
             margin: 30px 0 60px;
 
-            @media #{$mobile} {
+            @media #{$mobile}, #{$mobileAlt} {
                 grid-template-columns: 30px auto 30px;
                 grid-template-rows: auto auto;
+                margin-bottom: 30px;
             }
 
-            @media #{$mobileAlt} {
-                grid-template-columns: 60px calc(50% - 70px) 20px calc(50% - 70px) 60px;
-            }
+            // @media #{$mobileAlt} {
+            //     grid-template-columns: 60px calc(50% - 70px) 20px calc(50% - 70px) 60px;
+            // }
 
             @media #{$tablet} {
                 grid-template-columns: 60px calc(50% - 75px) 30px calc(50% - 75px) 60px;
-            }
-
-            @media #{$mobile} {
-                    margin-bottom: 30px;
             }
 
             ul {
@@ -1009,7 +1032,7 @@ div#contact {
                 list-style-position: inside;
                 list-style-type: none;
 
-                @media #{$mobile} {
+                @media #{$mobile}, #{$mobileAlt} {
                     margin-bottom: 30px;
                 }
 
@@ -1096,7 +1119,7 @@ div#contact {
                     }
                 }
 
-                @media #{$mobile} {
+                @media #{$mobile}, #{$mobileAlt} {
                     grid-column: 2;
                     grid-row: 2;
                     text-align: center;
