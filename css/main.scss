@@ -96,8 +96,8 @@ div#landing {
 
     div#guide {
         content: "";
-        -moz-animation: 3s ease-in-out infinite grow;
-        -webkit-animation: 3s ease-in-out infinite grow;
+        // -moz-animation: 3s ease-in-out infinite grow;
+        // -webkit-animation: 3s ease-in-out infinite grow;
         animation: 3s ease-in-out infinite grow;
         background: $white;
         bottom: 0;
@@ -109,24 +109,49 @@ div#landing {
         width: 3px;
         z-index: 2;
 
-        @-webkit-keyframes grow {
-            0% {
-                height: 25%;
+        @media #{$mobileAlt} {
+            animation: 3s ease-in-out infinite grow2;
+            height: 60px;
 
-                @media #{$mobileAlt} {
-                    height: 20%;
+            @-moz-keyframes grow2 {
+                0% {
+                    height: 60px;
+                }
+
+                50% {
+                    height: 10px;
+                }
+
+                100% {
+                    height: 60px;
                 }
             }
 
-            50% {
-                height: 10%
+            @-webkit-keyframes grow2 {
+                0% {
+                    height: 60px;
+                }
+
+                50% {
+                    height: 10px;
+                }
+
+                100% {
+                    height: 60px;
+                }
             }
 
-            100% {
-                height: 25%;
+            @keyframes grow2 {
+                0% {
+                    height: 60px;
+                }
 
-                @media #{$mobileAlt} {
-                    height: 20%;
+                50% {
+                    height: 10px;
+                }
+
+                100% {
+                    height: 60px;
                 }
             }
         }
@@ -134,50 +159,49 @@ div#landing {
         @-moz-keyframes grow {
             0% {
                 height: 25%;
-
-                @media #{$mobileAlt} {
-                    height: 20%;
-                }
             }
 
             50% {
-                height: 10%
+                height: 10%;
             }
 
             100% {
                 height: 25%;
+            }
+        }
 
-                @media #{$mobileAlt} {
-                    height: 20%;
-                }
+        @-webkit-keyframes grow {
+            0% {
+                height: 25%;
+            }
+
+            50% {
+                height: 10%;
+            }
+
+            100% {
+                height: 25%;
             }
         }
 
         @keyframes grow {
             0% {
                 height: 25%;
-
-                @media #{$mobileAlt} {
-                    height: 20%;
-                }
             }
 
             50% {
-                height: 10%
+                height: 10%;
             }
 
             100% {
                 height: 25%;
-
-                @media #{$mobileAlt} {
-                    height: 20%;
-                }
             }
         }
     }
 
     div.container {
         position: relative;
+        text-align: center;
         z-index: 2;
 
         @media #{$mobile} {
@@ -190,6 +214,7 @@ div#landing {
             font-size: 80px;
             font-weight: 700;
             margin: 0.1em 0 0.2em;
+            text-align: left;
 
             @media #{$mobile}, #{$mobileAlt} {
                 font-size: 48px;
@@ -201,9 +226,28 @@ div#landing {
             font-family: $body;
             font-size: 32px;
             font-weight: 500;
+            text-align: left;
 
             @media #{$mobile}, #{$mobileAlt} {
                 font-size: 24px;
+            }
+        }
+
+        a {
+            background: $royal-red;
+            color: $white;
+            display: inline-block;
+            font-family: $body;
+            font-size: 32px;
+            font-weight: 500;
+            margin: 48px 0 0 0;
+            padding: 0.5em 1em;
+            text-align: center;
+            text-decoration: none;
+
+            @media #{$mobile}, #{$mobileAlt} {
+                font-size: 24px;
+                margin: 36px 0 0 0;
             }
         }
     }
