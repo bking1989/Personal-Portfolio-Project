@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    // Smooth scroll for links
+    // Smooth Scroll for Links
     $('a[href*="#"]')
     .not('[href="#"]')
     .not('[href="#0"]')
