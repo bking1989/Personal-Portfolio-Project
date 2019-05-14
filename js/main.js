@@ -1,16 +1,12 @@
 $(document).ready(function() {
     // Navigation Menu Toggle
     $("div#toggle").on("click", function() {
-        $("div#menu").toggleClass("open", 200);
+        $("div#menu").addClass("open", 200);
     });
 
-    // Outside Click to Close
-    $("body").on("click", function(e) {
-        e.preventDefault();
-
-        if (e.target.id !== "menu" && e.target.id !== "toggle" && $("div#menu").hasClass("open") == true) {
-            $("div#menu").toggleClass("open", 200);
-        }
+    // Navigation Menu Close
+    $("a.menuItem").on("click", function() {
+        $("div#menu").removeClass("open", 200);
     });
 
     // Smooth Scroll for Links
@@ -29,7 +25,7 @@ $(document).ready(function() {
                     event.preventDefault();
                     $('html, body').animate({
                         scrollTop: target.offset().top
-                    }, 1200, function() {
+                    }, 800, function() {
                         var $target = $(target);
                         $target.focus();
                         if ($target.is(":focus")) {

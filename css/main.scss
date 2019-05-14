@@ -99,8 +99,10 @@ div#toggle {
 }
 
 div#menu {
+    align-content: center;
     background: $white;
     bottom: 0;
+    display: grid;
     position: fixed;
     right: -320px;
     top: 0;
@@ -114,6 +116,79 @@ div#menu {
 
     &.open {
         right: 0;
+    }
+
+    a {
+        display: block;
+        padding: 0.5em 0;
+        text-align: center;
+        text-decoration: none;
+
+        b {
+            color: $royal-red;
+            display: block;
+            font-family: $header;
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 1;
+
+            @media #{$mobile}, #{$mobileAlt} {
+                font-size: 24px;
+            }
+        }
+
+        hr {
+            border-bottom: $royal-red solid 2px;
+            border-left: none;
+            border-right: none;
+            border-top: $royal-red solid 2px;
+            height: 2px;
+            margin: 15px 60px;
+            overflow: visible;
+
+            &:before {
+                content: "★";
+                background: $white;
+                color: $royal-red;
+                display: inline-block;
+                font-size: 32px;
+                padding: 0 0.25em;
+                position: relative;
+                top: -16px;
+            }
+        }
+
+        p {
+            color: $navy-blue;
+            display: block;
+            font-family: $body;
+            font-size: 18px;
+            font-style: italic;
+            font-weight: 300;
+            line-height: 32px;
+        }
+
+        &:hover {
+            background: $royal-red;
+
+            b {
+                color: $white;
+            }
+
+            hr {
+                border-top-color: $white;
+                border-bottom-color: $white;
+
+                &:before {
+                    color: $white;
+                    background: $royal-red;
+                }
+            }
+
+            p {
+                color: $white;
+            }
+        }
     }
 }
 
@@ -595,7 +670,7 @@ div#work {
 
     @media #{$mobile} {
         grid-template-columns: 45px auto 45px;
-        grid-template-rows: 60px repeat(6, auto) 15px;
+        grid-template-rows: 45px repeat(6, auto) 15px;
     }
 
     @media #{$mobileAlt} {
@@ -1015,7 +1090,7 @@ div#contact {
 
     @media #{$mobile} {
         grid-template-columns: 45px auto 45px;
-        grid-template-rows: 60px auto 45px;
+        grid-template-rows: 45px auto 45px;
     }
 
     @media #{$mobileAlt} {
@@ -1069,9 +1144,9 @@ div#contact {
                 margin-bottom: 30px;
             }
 
-            // @media #{$mobileAlt} {
-            //     grid-template-columns: 60px calc(50% - 70px) 20px calc(50% - 70px) 60px;
-            // }
+            @media #{$mobileAlt} {
+                grid-template-columns: 60px auto 60px;
+            }
 
             @media #{$tablet} {
                 grid-template-columns: 60px calc(50% - 75px) 30px calc(50% - 75px) 60px;
