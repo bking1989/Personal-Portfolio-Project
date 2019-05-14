@@ -25,7 +25,7 @@ div#topBorder {
     position: fixed;
     right: 0;
     top: 0;
-    z-index: 999;
+    z-index: 998;
 
     &:after {
         content: "";
@@ -37,7 +37,7 @@ div#topBorder {
         right: 0;
         top: 0;
         width: 30px;
-        z-index: 999;
+        z-index: 998;
     }
 }
 
@@ -50,7 +50,7 @@ div#bottomBorder {
     margin: auto;
     position: fixed;
     right: 0;
-    z-index: 999;
+    z-index: 998;
 
     &:after {
         content: "";
@@ -62,7 +62,7 @@ div#bottomBorder {
         position: fixed;
         top: 0;
         width: 30px;
-        z-index: 999;
+        z-index: 998;
     }
 }
 
