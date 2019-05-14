@@ -1,11 +1,16 @@
 $(document).ready(function() {
     // Navigation Menu Toggle
     $("div#toggle").on("click", function() {
-        let rightVal = $("div#menu").css("right");
+        $("div#menu").toggleClass("open", 200);
+    });
 
-        if (rightVal == "-320px") {
-            $("div#menu").animate({"right": 0}, 200);
-        };
+    // Outside Click to Close
+    $("body").on("click", function(e) {
+        e.preventDefault();
+
+        if (e.target.id !== "menu" && e.target.id !== "toggle" && $("div#menu").hasClass("open") == true) {
+            $("div#menu").toggleClass("open", 200);
+        }
     });
 
     // Smooth Scroll for Links
